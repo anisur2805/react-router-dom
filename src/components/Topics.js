@@ -8,27 +8,28 @@ import {
 } from "react-router-dom";
 
 const Topics = () => {
-  const match = useRouteMatch();
-  console.log(match);
+  const {path, url} = useRouteMatch();
+  console.log("Path " + path );
+  console.log("URL " + url);
   return (
     <div>
       <h2>I am from Topics Component</h2>
       <ul>
         <li>
-          <NavLink to={`${match.url}/components`}>Components</NavLink>
+          <NavLink to={`${url}/components`}>Components</NavLink>
         </li>
         <li>
-          <NavLink to={`${match.url}/props-vs-state`}>
+          <NavLink to={`${url}/props-vs-state`}>
             Props vs State
           </NavLink>
         </li>
       </ul>
 
       <Switch>
-        <Route path={match.path} exact>
+        <Route path={path} exact>
           <h3>Please select a topic</h3>
         </Route>
-        <Route path={`${match.path}/:topicId`}>
+        <Route path={`${path}/:topicId`}>
           <Topic />
         </Route>
         
