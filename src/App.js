@@ -5,7 +5,7 @@ import AppSpecificContext from "./components/AppSpecificContext";
 import Main from "./components/Main";
 import ProvideAuth from "./components/ProvideAuth";
 import RouteMatchers from "./components/RouteMatchers";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar"; 
 
 function App() {
     return (
@@ -21,7 +21,7 @@ function App() {
                 <RouteMatchers />
             </BrowserRouter> */}
             
-            {/* <AppSpecificContext /> */}
+            {/* <AppSpecificContext />  */}
         </div>
     );
 }
